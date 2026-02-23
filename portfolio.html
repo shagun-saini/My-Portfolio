@@ -12,26 +12,39 @@
 <!-- Navbar -->
 
     <header>
-        <nav class=" fixed top-0 bg-white w-full h-16 z-50">
-            <div class="max-w-6xl m-auto">
+    <nav class="fixed top-0 bg-white w-full h-16 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
 
-                <div class=" flex px-3 py-3">
-             <p class="font-bold  text-center text-[clamp(18px,5vw,42px)] transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer whitespace-nowrap">Shagun Saini</p>
-               
-             <!-- Menu bar -->
-             <ul class="flex ml-auto list-none gap-5 font-semibold">
-                    <li><a href="#Home" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">Home</a></li>
-                    <li><a href="#About" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">About</a></li>
-                    <li><a href="#Skills" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">skills</a></li>
-                    <li><a href="#Projects" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">Projects</a></li>
-                    <li><a href="#Certificates" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">Certificates</a></li>
-                    <li><a href="#Contact" class="scroll mt-20 transition-all duration-300 hover:-translate-y-1 hover:text-blue-900 cursor-pointer">Contact</a></li>
-                </ul>
+            <!-- Logo -->
+            <p class="font-bold text-2xl text-blue-950 cursor-pointer">
+                Shagun Saini
+            </p>
 
-            </div>
-            </div>
-        </nav>
-    </header>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-6 font-semibold">
+                <li><a href="#home" class="hover:text-blue-900">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-900">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-900">Skills</a></li>
+                <li><a href="#certificate" class="hover:text-blue-900">Certificates</a></li>
+                <li><a href="#contact" class="hover:text-blue-900">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Button -->
+            <button id="menu-btn" class="md:hidden text-3xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col bg-white px-6 pb-4 font-semibold space-y-3">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificate">Certificates</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
 
     <!--MAin content Hero section -->
 
@@ -41,14 +54,14 @@
 
             <div id="home" class="flex flex-col md:flex-row items-center justify-between mt-20 px-6">
 
-                <div class="w-full md:w-1/2">
+                <div class="w-full">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-blue-950">
                     Hi I'm <span class="bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent">Shagun Saini</span>
                 </h1>
                 <p class="text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Frontend Developer</p>
             </div>
 
-            <div class="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
+            <div class="w-full mt-8 md:mt-0 flex justify-center">
                 <img src="girl.jfif" alt="profile" class="w-full max-w-sm mx-auto rounded-2xl border-8 border-gray-200 shadow-lg shadow-gray-200 transition-all duration-300 hover:-translate-y-1 lg:hover:scale-105">
             </div>
             </div>
@@ -77,7 +90,7 @@
 
 <!-- Skills Section -->
         <Section>
-            <div class="mt-50">
+            <div class="mt-24 md:mt-32">
                 <div class="text-blue-950 text-center font-bold text-[clamp(18px,5vw,42px)] mb-6">
                 <h2>My Skills</h2>
             </div>
@@ -97,7 +110,7 @@
 
         <!-- Certificates-Section -->
 
-        <div id="certificate" class="mt-50">
+        <div id="certificate" class="mt-24 md:mt-32">
             <div class="text-blue-950 text-center font-bold text-[clamp(18px,5vw,42px)] mb-6">
                 <h2>Certifications</h2>
             </div>
@@ -110,7 +123,7 @@
         <!-- Let's Connect -->
 
         <section>
-            <div id="contact" class="mt-50">
+            <div id="contact" class="mt-24 md:mt-32">
                 <div class=" text-center mx-auto px-auto">
                     <h2 class="text-blue-950 text-center font-bold text-[clamp(20px,5vw,42px)] mb-6">Let's Connect</h2>
                     <p class="text-gray-700">Have a Project in Mind? Let's Connect</p>
@@ -120,11 +133,11 @@
                     <h4 class="font-bold text-center text-[clamp(18px,4vw,30px)]">Send Inquiry</h4>
                     <form class="m-4 p-4 mt-5">
                         <label for="name" class="block mb-1 text-sm">Name *</label>
-                        <input type="text" placeholder="Your Name" required class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full md:w-1/2">
+                        <input type="text" placeholder="Your Name" required class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full">
                         <label for="email" class="block mb-1 text-sm">Email *</label>
-                        <input type="text" placeholder="Your Email" required class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full md:w-1/2">
+                        <input type="text" placeholder="Your Email" required class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full">
                         <label for="subject" class="block mb-1 text-sm">Subject</label>
-                        <input type="text" placeholder="Project discussion" class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full md:w-1/2">
+                        <input type="text" placeholder="Project discussion" class="px-4 py-2 border-2 border-gray-100 rounded-lg w-full">
                         <label for="message" class="block mb-1 text-sm">Message *</label>
                         <textarea name="text" id="message" rows="5" placeholder="Describe your project or message here..." required class="px-4 py-2 mb-1 border-2 border-gray-100 rounded-lg w-full md:max-w-2xl"></textarea>
                         <button class="mt-2 px-4 py-2 bg-gray-950 text-white w-full md:max-w-2xl border-2 border-gray-500 rounded-lg">Send Message</button>

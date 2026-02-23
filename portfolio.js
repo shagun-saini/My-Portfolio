@@ -33,3 +33,10 @@ contactpage.onclick=()=>{
     window.open("#contact");
     console.log("Open the Contact Page");
 }
+
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
