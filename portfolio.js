@@ -1,37 +1,39 @@
 // 
-let home = document.querySelector("#home");
-console.log(home);
+let home = document.getElementById("homepage");
 
-homepage.onclick=()=>{
-    window.open("#home");
-    console.log("Open the Home Page");
+    home.onclick = () =>{
+
+    document.getElementById("home").scrollIntoView({
+        behavior:"smooth"});
 }
 
 
-let about = document.querySelector("#about");
-console.log(about);
 
-aboutpage.onclick=()=>{
-    window.open("#about");
-    console.log("Open the About Page");
+
+let about = document.getElementById("aboutpage");
+
+    about.onclick = () =>{
+
+    document.getElementById("about").scrollIntoView({
+        behavior:"smooth"});
 }
 
 
-let certificate = document.querySelector("#certificate");
-console.log(certificate);
+let certificate = document.getElementById("certificatepage");
 
-certificatepage.onclick=()=>{
-    window.open("#certificate");
-    console.log("Open the Certificate Page");
+    certificate.onclick = () =>{
+
+    document.getElementById("certificate").scrollIntoView({
+        behavior:"smooth"});
 }
 
 
-let contact = document.querySelector("#contact");
-console.log(contact);
+let contact = document.getElementById("contactpage");
 
-contactpage.onclick=()=>{
-    window.open("#contact");
-    console.log("Open the Contact Page");
+    contact.onclick = () =>{
+
+    document.getElementById("contact").scrollIntoView({
+        behavior:"smooth"});
 }
 
 const menuBtn = document.getElementById("menu-btn");
